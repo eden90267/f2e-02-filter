@@ -1,0 +1,32 @@
+header {
+  background-color: #7828B4;
+  h1 {
+    line-height: 92px;
+  }
+  .search {
+    height: 100%;
+    position: relative;
+    @at-root #{&}_icon {
+      position: absolute;
+      top:0;
+      bottom: 5px;
+      left: 5px;
+      margin: auto;
+    }
+    input {
+      width: 380px;
+      font-size: 20px;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      border: 0;
+      border-bottom: 2px solid #fff;
+      background-color: rgba(255, 255, 255, 0);
+      padding-left: 40px;
+      &::placeholder {
+        color: rgba(255,255,255,0.50);
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+      }
+    }
+  }
+}
