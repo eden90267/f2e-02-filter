@@ -1,0 +1,96 @@
+@import "../basic/mixin";
+
+.search-content {
+  padding-left: 40px;
+  & > h3 {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-weight: 400;
+    @include respond-below(xs) {
+      margin-left: 40px;
+    }
+  }
+  @include respond-below(xs) {
+    padding-left: 0;
+  }
+}
+
+.search-content_count {
+  font-weight: bold;
+  color: #8F2CFA;
+}
+
+.search-content_result {
+  & > .media {
+    @include respond-below(md) {
+      flex-direction: column;
+    }
+  }
+  & > li {
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+    &:hover {
+      box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.2);
+    }
+    & > img {
+      width: 220px;
+      height: 220px;
+      @include respond-below(md) {
+        width: 100%;
+        height: auto;
+      }
+    }
+    & > .media-body {
+      padding: 24px 16px 0 4px;
+      @include respond-below(md) {
+        padding: 24px 15px;
+      }
+      & > h4 {
+        color: #9013FE;
+      }
+      & > p {
+        line-height: 24px;
+        height: 50px;
+        overflow: hidden;
+      }
+      & > ul > li {
+        margin-right: 20px;
+      }
+    }
+  }
+  @at-root #{&}-item_ticket-info {
+    color: #fff;
+    display: inline-block;
+    background-color: #D7D7D7;
+    border-radius: 100px;
+    padding: 3px 16px;
+    font-style: italic;
+  }
+  @at-root #{&}-item_address {
+    color: #9B9B9B;
+  }
+  @at-root #{&}-item_opentime {
+    color: #9B9B9B;
+  }
+}
+
+.pagination {
+  & > .page-item {
+    & > .page-link {
+      color: #9013FE;
+      &:hover {
+        background-color: #cf8ffe;
+        color: #fff;
+      }
+    }
+    &.active {
+      .page-link {
+        background-color: #9013FE;
+        color: #fff;
+        border-color: #ECEEEF;
+      }
+    }
+  }
+}

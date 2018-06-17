@@ -1,0 +1,52 @@
+@import "../basic/mixin";
+
+header {
+  background-color: #7828B4;
+  h1 {
+    margin-left: 40px;
+    line-height: 92px;
+    @include respond-below(xs) {
+      width: 100%;
+      text-align: center;
+      margin-left: 0;
+    }
+  }
+  .search {
+    height: 100%;
+    position: relative;
+    padding-left: 40px;
+    @include respond-below(xs) {
+      margin-bottom: 24px;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    @at-root #{&}_icon {
+      position: absolute;
+      top:0;
+      bottom: 5px;
+      left: 45px;
+      margin: auto;
+      @include respond-below(xs) {
+        left: 35px;
+      }
+    }
+    input {
+      width: 380px;
+      font-size: 20px;
+      color: #fff;
+      font-style: italic;
+      border: 0;
+      border-bottom: 2px solid #fff;
+      background-color: rgba(255, 255, 255, 0);
+      padding-left: 40px;
+      &::placeholder {
+        color: rgba(255,255,255,0.50);
+        font-size: 20px;
+        font-style: italic;
+      }
+      @include respond-below(xs) {
+        width: 100%;
+      }
+    }
+  }
+}
